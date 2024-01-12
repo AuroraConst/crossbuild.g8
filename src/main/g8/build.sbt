@@ -1,16 +1,18 @@
 // give the user a nice default project!
-ThisBuild / organization := "$organization$"
-ThisBuild / scalaVersion := DependencyVersions.scalaVersion
+val sharedSettings = Seq(
+  scalaVersion := DependencyVersions.scalaVersion,
+  organization := "$organization$"
+)
 
 lazy val root = project.in(file(".")).
   aggregate(foo.js, foo.jvm).
-  settings(
+  settings(sharedSettings,
     publish := {},
     publishLocal := {},
   )
 
-lazy val foo = crossProject(JSPlatform, JVMPlatform).in(file(".")).
-  settings(
+lazy val foo = crossProject(JSPlatform, JVMPlatform).crossType(CrossType.Full).in(file("."))
+  .settings(
     name := "foo",
     version := "0.1-SNAPSHOT",
     libraryDependencies ++= Dependencies.upickle.value,

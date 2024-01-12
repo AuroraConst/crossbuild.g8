@@ -2,8 +2,6 @@ node_modules/
 
 # scala related
 logs
-webview/project/**
-webview/target/**
 project/target
 target
 tmp
@@ -17,6 +15,7 @@ dist
 .classpath
 .project
 .bloop
+.vscode/
 .metals/
 build/
 .scala_build/
@@ -24,4 +23,3 @@ build/
 .settingsz
 .DS_Store
 null
-webview/project/
