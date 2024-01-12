@@ -1,0 +1,5 @@
+package $organization$
+
+class StubJs {
+  
+}

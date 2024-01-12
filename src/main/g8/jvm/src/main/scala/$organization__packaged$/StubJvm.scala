@@ -1,0 +1,4 @@
+package $organization$
+class StubJvm {
+  
+}
