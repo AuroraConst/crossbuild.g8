@@ -1,7 +1,7 @@
 // give the user a nice default project!
 val sharedSettings = Seq(
   scalaVersion := DependencyVersions.scalaVersion,
-  organization := "\$organization\$"
+  organization := "$organization$"
 )
 
 lazy val root = project.in(file(".")).
@@ -14,7 +14,7 @@ lazy val root = project.in(file(".")).
 
 lazy val $name$ = crossProject(JSPlatform, JVMPlatform).crossType(CrossType.Full).in(file("."))
   .settings(
-    name := "\$name\$",
+    name := "$name$",
     version := "0.1-SNAPSHOT",
     sharedSettings,
     libraryDependencies ++= Dependencies.upickle.value,
