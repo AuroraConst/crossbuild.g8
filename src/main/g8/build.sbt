@@ -4,7 +4,7 @@ val sharedSettings = Seq(
   organization := "$organization$",
   scalacOptions ++=  Seq("-Yretain-trees") //necessary in zio-json if any case classes have default parameters
 )
-)
+
 
 lazy val root = project.in(file(".")).
   aggregate($name$.js, $name$.jvm).
