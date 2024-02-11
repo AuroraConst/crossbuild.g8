@@ -1,7 +1,9 @@
 // give the user a nice default project!
 val sharedSettings = Seq(
   scalaVersion := DependencyVersions.scalaVersion,
-  organization := "$organization$"
+  organization := "$organization$",
+  scalacOptions ++=  Seq("-Yretain-trees") //necessary in zio-json if any case classes have default parameters
+)
 )
 
 lazy val root = project.in(file(".")).
