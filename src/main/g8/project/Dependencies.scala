@@ -3,9 +3,10 @@ import sbt._
 
 object Dependencies {
   val zioVersion = "2.0.13"
+  val zioJsonVersion = "0.6.2"
   val zioHttpVersion = "3.0.0-RC1"
 
-
+  val zioJsonJs     = "dev.zio" %%% "zio-json" % zioJsonVersion
   val zioHttp     = "dev.zio" %% "zio-http"     % zioHttpVersion
   val zioTest     = "dev.zio" %% "zio-test"     % zioVersion % Test
   val zioTestSBT = "dev.zio" %% "zio-test-sbt" % zioVersion % Test
@@ -32,12 +33,6 @@ object Dependencies {
   val laminar: Def.Initialize[Seq[ModuleID]] = Def.setting {
     Seq(
       "com.raquo" %%% "laminar" % DependencyVersions.laminar
-    )
-  }
-
-  val upickle: Def.Initialize[Seq[ModuleID]] = Def.setting {
-    Seq(
-      "com.lihaoyi" %%% "upickle" % DependencyVersions.`upickle`
     )
   }
 

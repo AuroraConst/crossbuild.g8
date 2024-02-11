@@ -17,7 +17,7 @@ lazy val $name$ = crossProject(JSPlatform, JVMPlatform).crossType(CrossType.Full
     name := "$name$",
     version := "0.1-SNAPSHOT",
     sharedSettings,
-    libraryDependencies ++= Dependencies.upickle.value,
+    libraryDependencies += Dependencies.zioJsonJs,
     libraryDependencies ++= Dependencies.scalatest.value
 
   ).
