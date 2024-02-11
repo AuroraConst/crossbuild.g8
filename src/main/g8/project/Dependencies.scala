@@ -4,10 +4,7 @@ import sbt._
 object Dependencies {
   val zioVersion = "2.0.13"
   val zioHttpVersion = "3.0.0-RC1"
-  val zioJsVersion = "2.0.21"
 
-  val circeVersion = "0.14.6"
-  val catsEffect_3_version = "3.5.2"
 
   val zioHttp     = "dev.zio" %% "zio-http"     % zioHttpVersion
   val zioTest     = "dev.zio" %% "zio-test"     % zioVersion % Test
