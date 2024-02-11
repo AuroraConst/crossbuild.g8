@@ -6,7 +6,6 @@ object Dependencies {
   val zioJsonVersion = "0.6.2"
   val zioHttpVersion = "3.0.0-RC1"
 
-  val zioJsonJs     = "dev.zio" %%% "zio-json" % zioJsonVersion
   val zioHttp     = "dev.zio" %% "zio-http"     % zioHttpVersion
   val zioTest     = "dev.zio" %% "zio-test"     % zioVersion % Test
   val zioTestSBT = "dev.zio" %% "zio-test-sbt" % zioVersion % Test
@@ -22,6 +21,11 @@ object Dependencies {
   val scalajsdom  = Def.setting {
     Seq("org.scala-js" %%% "scalajs-dom" % "2.4.0")
   }
+
+  val zioJson = Def.setting {
+    Seq("dev.zio" %%% "zio-json" % zioJsonVersion)
+  }
+
   val scalatest   :     Def.Initialize[Seq[ModuleID]] = Def.setting {
     Seq(
       "org.scalactic" %%% "scalactic"  % DependencyVersions.scalatest,
