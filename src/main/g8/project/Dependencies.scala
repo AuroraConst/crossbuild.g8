@@ -2,9 +2,9 @@ import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 import sbt._
 
 object Dependencies {
-  val zioVersion = "2.0.13"
+  val zioVersion = "2.1.1"
   val zioJsonVersion = "0.6.2"
-  val zioHttpVersion = "3.0.0-RC1"
+  val zioHttpVersion = "3.0.0-RC4"
 
   val zioHttp     = "dev.zio" %% "zio-http"     % zioHttpVersion
   val zioTest     = "dev.zio" %% "zio-test"     % zioVersion % Test
